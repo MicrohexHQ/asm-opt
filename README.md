@@ -1,4 +1,4 @@
-# ABOUT #
+# ABOUT # 
 
 This is a solution to the problem of easy to use write-once, run everywhere x86 assembler. I have experimented with write-once inline assembler (in the style of [Crypto++](http://www.cryptopp.com/)), but it turned out to be too clunky and limited, e.g. source code must be transformed to Intel Syntax and then C macros which expand the instructions properly, referencing C constants in assembler which are not referenced by C is sketchy because the constants can get optimized away and/or are linked under a different name, Win64 versions have to jump through a lot of hoops to merely generate code which then has to be compiled by MASM, clang's integrated assembler (pre 3.2ish) does not understand `.intel_syntax`, etc.
 
